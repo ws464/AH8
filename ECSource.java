@@ -10,8 +10,15 @@ class Node<T> {
 
 class ECSource {
   public static <T> T getNodeValue(Node<T> head, int index) {
-    // todo - note the return type, but don't overthink it
-    return;
+    for(int i=0; i<index; i++){
+        if(head==null){
+          return null;
+        }
+        else{
+          head=head.next;
+        }
+    }
+    return head.val;
   }
   
   public static void main(String[] args) {
